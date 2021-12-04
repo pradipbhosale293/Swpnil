@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function abc(){
+            console.log('Hello this is my first function');
+            xyz();
+        }
+
+        function xyz(){
+            console.log('This is from second function');
+        }
+        abc();
+          function updateCounter(){
+            var counter = 1;
+            counter++;
+            console.log(counter);
+        }
+    var updateCounter1 = (function(){
+            var counter =0;
+            return function(){
+                counter++;
+                console.log(counter);
+            }
+        }());
+    </script>
+</head>
+<body>
+    <h1> clouser</h1>
+    <button onclick="updateCounter1()"> click me </button>
+    
+</body>
+</html> -->
+<div class="container"></div>
+<form name="myForm" (ngSubmit)= "onSubmitForm(frm)" #frm ="ngForm" >
+    
+    <div class="form-group">
+        <label> Enter your FullName</label><br>
+        <input type="text" class="form-control" name="fname" #fname="ngModel" ngModel>
+    </div>
+    <div class="form-group">
+        <label> Enter your Username</label><br>
+        <input type="text" class="form-control" name="username" #username="ngModel" ngModel>
+    </div>
+    <div class="form-group">
+        <label> Enter your Email</label><br>
+        <input type="email" class="form-control" name="email" #email="ngModel" ngModel>
+    </div>
+    <div class="form-group">
+        <label> Enter your Username</label><br>
+        <input type="text" class="form-control" name="username" #username="ngModel" ngModel>
+    </div>
+    <div class="form-group">
+        <label> Enter your Mobile No.</label><br>
+        <input type="tel" class="form-control" name="mobile" #mobile="ngModel" ngModel>
+    </div>
+    <div class="form-group">
+        <label> select Course</label><br>
+        <select class="from-control" name="course" #course="ngModel" ngModel>
+            <option *ngFor ="let course of courses">{{course}}</option> 
+        </select>
+        <div class="div">
+            <label>Gender</label><br>
+         <input type="radio" class="form-control" name="gender" value="Male" #gender = "ngModel" ngModel>
+         <label for="male"> Male</label><br>
+         <input type="radio" class="form-control" name="gender" value="Female" #gender = "ngModel" ngModel>
+         <label for="female"> Female</label><br>
+        </div>
+        <div class="form-group">
+            <label>Password</label><br>
+            <input type="password" name="pass" #pass="ngModel" ngModel>
+        </div>
+        <div class="form-group">
+            <label> Confirm Password</label><br>
+            <input type="password" name="cpass" #cpass="ngModel" ngModel>
+        </div>
+        <div class="form-group">
+        <button type="submit" class="btn btn-info">Sumbit</button>
+    </div>
+</form>
